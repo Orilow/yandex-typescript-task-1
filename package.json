@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "main": "std.js",
+  "scripts": {
+    "deps": "npm ci",
+    "lint": "eslint *.ts",
+    "test": "npm run lint && tsc && mocha --exit --require ts-node/register *.spec.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+  "dependencies": {
+    "@types/mocha": "5.2.7",
+    "@types/node": "12.12.14",
+    "@typescript-eslint/eslint-plugin": "2.9.0",
+    "@typescript-eslint/parser": "2.9.0",
+    "eslint": "6.7.2",
+    "eslint-config-hrundel": "1.4.1",
+    "husky": "3.1.0",
+    "mocha": "6.2.2",
+    "ts-node": "8.5.4",
+    "typescript": "3.7.2"
+  }
+}
